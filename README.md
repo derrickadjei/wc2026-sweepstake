@@ -1,7 +1,5 @@
 # World Cup 2026 — Family Sweepstake
 
-A single-page leaderboard for tracking Yaw, Andy, Max & Derrick's World Cup 2026 sweepstake. No backend, no database — runs entirely in the browser and saves results to localStorage.
-
 ## What's inside
 
 - `index.html` — the page
@@ -10,10 +8,6 @@ A single-page leaderboard for tracking Yaw, Andy, Max & Derrick's World Cup 2026
 - `points-engine.js` — points calculation logic (mirrors the original spreadsheet rules)
 - `state.js` — the draw, fixtures, and saved/seed results
 - `app.js` — rendering and interactivity
-
-## Password
-
-The site is gated behind a simple password screen: **`dynasty26`**
 
 The password is not stored in plain text anywhere in the code — `gate.js` only contains a SHA-256 *hash* of it. When someone types a password, the browser hashes what they typed and compares it to the stored hash, so the actual word never appears in the files you commit to GitHub. That keeps it from being readable by anyone casually browsing the public repo.
 
