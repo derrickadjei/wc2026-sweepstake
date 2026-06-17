@@ -2,7 +2,7 @@
 // APP — rendering + interactions
 // ============================================================
 
-let rawState = loadState();
+let rawState = null;
 let activeTab = "leaderboard";
 let groupFilter = "ALL";
 let koRoundFilter = "R32";
@@ -11,7 +11,49 @@ const app = document.getElementById("app");
 
 function persist() {
   saveState(rawState);
+  renderPreservingFocus();
+}
+
+function renderPreservingFocus() {
+  const active = document.activeElement;
+  let focusKey = null;
+  let selStart = null, selEnd = null;
+
+  if (active && (active.dataset.field || active.dataset.bonus || active.dataset.kofield)) {
+    focusKey = active.outerHTML.match(/data-[a-z]+="[^"]*"/g)?.join("|") || null;
+    focusKey = active.getAttribute("data-field") || active.getAttribute("data-bonus") || active.getAttribute("data-kofield");
+    focusKey = JSON.stringify({
+      field: active.dataset.field || active.dataset.bonus || active.dataset.kofield,
+      match: active.dataset.match || null,
+      team: active.dataset.team || null,
+      koteam: active.dataset.koteam || null
+    });
+    if (typeof active.selectionStart === "number") {
+      selStart = active.selectionStart;
+      selEnd = active.selectionEnd;
+    }
+  }
+
   render();
+
+  if (focusKey) {
+    const candidates = app.querySelectorAll("[data-field], [data-bonus], [data-kofield]");
+    for (const el of candidates) {
+      const key = JSON.stringify({
+        field: el.dataset.field || el.dataset.bonus || el.dataset.kofield,
+        match: el.dataset.match || null,
+        team: el.dataset.team || null,
+        koteam: el.dataset.koteam || null
+      });
+      if (key === focusKey) {
+        el.focus();
+        if (selStart !== null && typeof el.setSelectionRange === "function") {
+          try { el.setSelectionRange(selStart, selEnd); } catch (e) { /* ignore for input types that don't support it */ }
+        }
+        break;
+      }
+    }
+  }
 }
 
 function computed() {
@@ -364,9 +406,11 @@ function renderDataTab() {
     <section class="section">
       <div class="section-head"><h2 class="section-title">Backup &amp; Sync</h2></div>
       <div class="data-bar">
-        This site stores results in <b>your browser only</b> (localStorage). To share updates
-        with the group, export the data after entering results and send the file to whoever
-        else is updating — or paste it back in on another device to keep things in sync.
+        Live results load from <code>results.json</code> in the site's GitHub repo, so everyone
+        who visits this page sees the same standings automatically — no import needed on their end.
+        After entering scores here, click <b>Export Results</b>, then replace <code>results.json</code>
+        in the repo with the downloaded file and push/upload it. The site updates for everyone within
+        a minute or two of redeploying.
       </div>
       <div class="btn-row">
         <button class="btn" id="export-btn">Export Results (.json)</button>
@@ -523,4 +567,11 @@ function attachListeners() {
   }
 }
 
-render();
+
+async function init() {
+  app.innerHTML = `<div class="empty-state">Loading latest results…</div>`;
+  rawState = await loadState();
+  render();
+}
+
+init();

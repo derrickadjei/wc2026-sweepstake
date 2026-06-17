@@ -1,0 +1,216 @@
+{
+  "players": [
+    "Yaw",
+    "Andy",
+    "Max",
+    "Derrick"
+  ],
+  "draw": {
+    "Yaw": [
+      "Germany",
+      "Argentina",
+      "France",
+      "Switzerland",
+      "Senegal",
+      "Ecuador",
+      "Paraguay",
+      "Qatar",
+      "Tunisia",
+      "Jordan",
+      "Curaçao",
+      "Cabo Verde"
+    ],
+    "Andy": [
+      "England",
+      "Netherlands",
+      "Mexico",
+      "Colombia",
+      "Austria",
+      "Croatia",
+      "Norway",
+      "Uzbekistan",
+      "Ivory Coast",
+      "DR Congo",
+      "Bosnia & H",
+      "Ghana"
+    ],
+    "Max": [
+      "Belgium",
+      "Brazil",
+      "USA",
+      "Uruguay",
+      "Iran",
+      "Japan",
+      "Algeria",
+      "Panama",
+      "South Africa",
+      "Czechia",
+      "New Zealand",
+      "Türkiye"
+    ],
+    "Derrick": [
+      "Portugal",
+      "Spain",
+      "Canada",
+      "Morocco",
+      "Korea Republic",
+      "Australia",
+      "Egypt",
+      "Saudi Arabia",
+      "Scotland",
+      "Iraq",
+      "Sweden",
+      "Haiti"
+    ]
+  },
+  "matchResults": {
+    "A1": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homeCS": true,
+      "awayCS": false,
+      "homeRed": 1,
+      "awayRed": 2
+    },
+    "A2": {
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "B1": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "B2": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "C1": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "C2": {
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": true,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "D1": {
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "D2": {
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "homeCS": true,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "E1": {
+      "homeGoals": 7,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "E2": {
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "homeCS": true,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "F1": {
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "F2": {
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "G1": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "G2": {
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "H1": {
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "H2": {
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "homeCS": false,
+      "awayCS": false,
+      "homeRed": 0,
+      "awayRed": 0
+    },
+    "I1": {
+      "homeGoals": "3",
+      "awayGoals": "1",
+      "homeCS": false
+    },
+    "I2": {
+      "homeGoals": "1",
+      "awayGoals": "4"
+    },
+    "J1": {
+      "homeGoals": "3",
+      "awayGoals": "0",
+      "homeCS": true
+    },
+    "J2": {
+      "homeGoals": "3",
+      "awayGoals": "1"
+    }
+  },
+  "teamBonus": {},
+  "knockout": {}
+}

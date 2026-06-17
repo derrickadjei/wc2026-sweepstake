@@ -72,26 +72,24 @@ function findTeamGroup(team) {
 }
 
 // ---------- Default seed results (carried over from the spreadsheet) ----------
-const SEED_RESULTS = {
-  // matchId -> { homeGoals, awayGoals, homeCS, awayCS, homeRed, awayRed }
-  // (carried over exactly from the latest spreadsheet entries)
-  A1: { homeGoals: 2, awayGoals: 0, homeCS: true,  awayCS: false, homeRed: 1, awayRed: 2 }, // Mexico 2-0 South Africa
-  A2: { homeGoals: 2, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Korea Republic 2-1 Czechia
-  B1: { homeGoals: 1, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Canada 1-1 Bosnia & H
-  B2: { homeGoals: 1, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Qatar 1-1 Switzerland
-  C1: { homeGoals: 1, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Brazil 1-1 Morocco
-  C2: { homeGoals: 0, awayGoals: 1, homeCS: false, awayCS: true,  homeRed: 0, awayRed: 0 }, // Haiti 0-1 Scotland
-  D1: { homeGoals: 4, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // USA 4-1 Paraguay
-  D2: { homeGoals: 2, awayGoals: 0, homeCS: true,  awayCS: false, homeRed: 0, awayRed: 0 }, // Australia 2-0 Türkiye
-  E1: { homeGoals: 7, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Germany 7-1 Curaçao
-  E2: { homeGoals: 1, awayGoals: 0, homeCS: true,  awayCS: false, homeRed: 0, awayRed: 0 }, // Ivory Coast 1-0 Ecuador
-  F1: { homeGoals: 2, awayGoals: 2, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Netherlands 2-2 Japan
-  F2: { homeGoals: 5, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Sweden 5-1 Tunisia
-  G1: { homeGoals: 1, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Belgium 1-1 Egypt
-  G2: { homeGoals: 2, awayGoals: 2, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Iran 2-2 New Zealand
-  H1: { homeGoals: 0, awayGoals: 0, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }, // Spain 0-0 Cabo Verde
-  H2: { homeGoals: 1, awayGoals: 1, homeCS: false, awayCS: false, homeRed: 0, awayRed: 0 }  // Saudi Arabia 1-1 Uruguay
-};
+// ---------- Seed results are now loaded from results.json (see loadSeedResults below) ----------
+// This keeps "the latest results" as a single committable file: export from the app,
+// drop the file into the repo as results.json, redeploy, and everyone sees it.
+let SEED_RESULTS = {};
+
+async function loadSeedResults() {
+  try {
+    const res = await fetch("results.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("results.json not found");
+    const data = await res.json();
+    SEED_RESULTS = data.matchResults || {};
+    return data;
+  } catch (e) {
+    console.warn("Could not load results.json, starting with no results.", e);
+    SEED_RESULTS = {};
+    return null;
+  }
+}
 
 function defaultState() {
   return {
@@ -106,17 +104,47 @@ function defaultState() {
   };
 }
 
-function loadState() {
+/**
+ * Loads state with this priority:
+ * 1. results.json committed to the repo (the "official" shared results)
+ * 2. localStorage (only used if it's newer than what's committed — see note below)
+ *
+ * In the simple one-admin workflow, results.json IS the source of truth: every time
+ * you export, you're meant to replace results.json in the repo with that export.
+ * localStorage is just a convenience so your in-progress edits survive a page refresh
+ * before you've exported yet.
+ */
+async function loadState() {
+  const seedData = await loadSeedResults();
+
+  let state = defaultState();
+  if (seedData) {
+    state = normalizeState({
+      players: seedData.players || state.players,
+      draw: seedData.draw || state.draw,
+      matchResults: seedData.matchResults || state.matchResults,
+      teamBonus: seedData.teamBonus || state.teamBonus,
+      knockout: seedData.knockout || state.knockout
+    });
+  }
+
+  // Layer on any local-only edits made since the last export (same device only)
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      return normalizeState(parsed);
+      const committedVersion = seedData?.exportedAt || null;
+      const localVersion = parsed.exportedAt || null;
+      // If local edits are newer than (or there's no) committed version, prefer local
+      if (!committedVersion || (localVersion && localVersion > committedVersion)) {
+        state = normalizeState(parsed);
+      }
     }
   } catch (e) {
-    console.warn("Could not load saved state, using defaults", e);
+    console.warn("Could not read local edits", e);
   }
-  return defaultState();
+
+  return state;
 }
 
 function normalizeState(parsed) {
@@ -126,16 +154,20 @@ function normalizeState(parsed) {
     draw: parsed.draw || base.draw,
     matchResults: parsed.matchResults || base.matchResults,
     teamBonus: parsed.teamBonus || base.teamBonus,
-    knockout: parsed.knockout || base.knockout
+    knockout: parsed.knockout || base.knockout,
+    exportedAt: parsed.exportedAt || null
   };
 }
 
 function saveState(state) {
+  // Stamp every local save so we can tell later whether it's newer than a committed export
+  state.exportedAt = new Date().toISOString();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
 function exportStateJSON(state) {
-  return JSON.stringify(state, null, 2);
+  const toExport = { ...state, exportedAt: new Date().toISOString() };
+  return JSON.stringify(toExport, null, 2);
 }
 
 function resetState() {
