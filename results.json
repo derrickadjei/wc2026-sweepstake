@@ -226,9 +226,29 @@
       "homeGoals": "1",
       "awayGoals": "0",
       "homeCS": true
+    },
+    "A3": {
+      "homeGoals": "1",
+      "awayGoals": "1"
+    },
+    "A4": {
+      "homeGoals": "1",
+      "awayGoals": "0",
+      "homeCS": true
+    },
+    "B3": {
+      "homeGoals": "4",
+      "awayGoals": "1",
+      "awayRed": "1"
+    },
+    "B4": {
+      "homeGoals": "6",
+      "awayGoals": "0",
+      "homeCS": true,
+      "awayRed": "2"
     }
   },
   "teamBonus": {},
   "knockout": {},
-  "exportedAt": "2026-06-18T07:39:40.847Z"
+  "exportedAt": "2026-06-19T08:07:49.914Z"
 }
