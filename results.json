@@ -324,9 +324,30 @@
     "J3": {
       "homeGoals": "1",
       "awayGoals": "2"
+    },
+    "K3": {
+      "homeGoals": "1",
+      "awayGoals": "0",
+      "homeCS": true
+    },
+    "K4": {
+      "homeGoals": "5",
+      "awayGoals": "0",
+      "homeCS": true
+    },
+    "L3": {
+      "homeGoals": "0",
+      "awayGoals": "1",
+      "awayCS": true
+    },
+    "L4": {
+      "homeGoals": "0",
+      "awayGoals": "0",
+      "awayCS": true,
+      "homeCS": true
     }
   },
   "teamBonus": {},
   "knockout": {},
-  "exportedAt": "2026-06-23T09:59:40.693Z"
+  "exportedAt": "2026-06-24T08:59:42.631Z"
 }
