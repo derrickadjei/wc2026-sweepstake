@@ -429,9 +429,459 @@
     "G6": {
       "homeGoals": "1",
       "awayGoals": "1"
+    },
+    "J5": {
+      "homeGoals": "1",
+      "awayGoals": "3"
+    },
+    "J6": {
+      "homeGoals": "3",
+      "awayGoals": "3"
+    },
+    "K5": {
+      "homeGoals": "0",
+      "awayGoals": "0",
+      "homeCS": true,
+      "awayCS": true
+    },
+    "K6": {
+      "homeGoals": "3",
+      "awayGoals": "1"
+    },
+    "L5": {
+      "homeGoals": "0",
+      "awayGoals": "2",
+      "awayCS": true
+    },
+    "L6": {
+      "homeGoals": "2",
+      "awayGoals": "1"
     }
   },
-  "teamBonus": {},
-  "knockout": {},
-  "exportedAt": "2026-06-27T11:44:06.864Z"
+  "teamBonus": {
+    "Mexico": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "South Africa": {
+      "qualified": true
+    },
+    "Canada": {
+      "qualified": true
+    },
+    "Bosnia & H": {
+      "qualified": true
+    },
+    "Switzerland": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Brazil": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Morocco": {
+      "qualified": true
+    },
+    "USA": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Australia": {
+      "qualified": true
+    },
+    "Paraguay": {
+      "qualified": true
+    },
+    "Germany": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Ivory Coast": {
+      "qualified": true
+    },
+    "Ecuador": {
+      "qualified": true
+    },
+    "Netherlands": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Japan": {
+      "qualified": true
+    },
+    "Sweden": {
+      "qualified": true
+    },
+    "Belgium": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Egypt": {
+      "qualified": true
+    },
+    "Iran": {
+      "qualified": true
+    },
+    "Spain": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Cabo Verde": {
+      "qualified": true
+    },
+    "France": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Senegal": {
+      "qualified": true
+    },
+    "Norway": {
+      "qualified": true
+    },
+    "Argentina": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Algeria": {
+      "qualified": true
+    },
+    "Austria": {
+      "qualified": true
+    },
+    "Portugal": {
+      "qualified": true
+    },
+    "DR Congo": {
+      "qualified": true
+    },
+    "Colombia": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "England": {
+      "qualified": true,
+      "topOfGroup": true
+    },
+    "Croatia": {
+      "qualified": true
+    },
+    "Ghana": {
+      "qualified": true
+    }
+  },
+  "knockout": {
+    "Germany": [
+      {
+        "round": "R32",
+        "opponent": "Paraguay",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Argentina": [
+      {
+        "round": "R32",
+        "opponent": "Cape Verde",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "France": [
+      {
+        "round": "R32",
+        "opponent": "Sweden",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Switzerland": [
+      {
+        "round": "R32",
+        "opponent": "Algeria",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Senegal": [
+      {
+        "round": "R32",
+        "opponent": "Belgium",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Ecuador": [
+      {
+        "round": "R32",
+        "opponent": "Mexico",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Paraguay": [
+      {
+        "round": "R32",
+        "opponent": "Germany",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Cabo Verde": [
+      {
+        "round": "R32",
+        "opponent": "Argentina",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "England": [
+      {
+        "round": "R32",
+        "opponent": "DR Congo",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Netherlands": [
+      {
+        "round": "R32",
+        "opponent": "Morocco",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Mexico": [
+      {
+        "round": "R32",
+        "opponent": "Ecuador",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Colombia": [
+      {
+        "round": "R32",
+        "opponent": "Ghana",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Austria": [
+      {
+        "round": "R32",
+        "opponent": "Spain",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Croatia": [
+      {
+        "round": "R32",
+        "opponent": "Portugal",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Norway": [
+      {
+        "round": "R32",
+        "opponent": "Ivory Coast",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Ivory Coast": [
+      {
+        "round": "R32",
+        "opponent": "Norway",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "DR Congo": [
+      {
+        "round": "R32",
+        "opponent": "England",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Ghana": [
+      {
+        "round": "R32",
+        "opponent": "Colombia",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Belgium": [
+      {
+        "round": "R32",
+        "opponent": "Senegal",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Brazil": [
+      {
+        "round": "R32",
+        "opponent": "Japan",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "USA": [
+      {
+        "round": "R32",
+        "opponent": "Bosnia and H",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Bosnia & H": [
+      {
+        "round": "R32",
+        "opponent": "USA",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Algeria": [
+      {
+        "round": "R32",
+        "opponent": "Switzerland",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "South Africa": [
+      {
+        "round": "R32",
+        "opponent": "Canada",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Portugal": [
+      {
+        "round": "R32",
+        "opponent": "Croatia",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Spain": [
+      {
+        "round": "R32",
+        "opponent": "Austria",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Canada": [
+      {
+        "round": "R32",
+        "opponent": "South Africa",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Morocco": [
+      {
+        "round": "R32",
+        "opponent": "Netherlands",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Australia": [
+      {
+        "round": "R32",
+        "opponent": "Egypt",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Egypt": [
+      {
+        "round": "R32",
+        "opponent": "Australia",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ],
+    "Sweden": [
+      {
+        "round": "R32",
+        "opponent": "France",
+        "goals": "",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
+    ]
+  },
+  "exportedAt": "2026-06-28T06:11:56.257Z"
 }
