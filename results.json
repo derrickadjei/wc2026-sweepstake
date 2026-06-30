@@ -576,7 +576,7 @@
       {
         "round": "R32",
         "opponent": "Paraguay",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -636,10 +636,10 @@
       {
         "round": "R32",
         "opponent": "Germany",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Cabo Verde": [
@@ -666,7 +666,7 @@
       {
         "round": "R32",
         "opponent": "Morocco",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -766,10 +766,10 @@
       {
         "round": "R32",
         "opponent": "Japan",
-        "goals": "",
+        "goals": "2",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "USA": [
@@ -836,20 +836,20 @@
       {
         "round": "R32",
         "opponent": "South Africa",
-        "goals": "",
-        "cleanSheet": false,
+        "goals": "1",
+        "cleanSheet": true,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Morocco": [
       {
         "round": "R32",
         "opponent": "Netherlands",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Australia": [
@@ -881,7 +881,17 @@
         "redCards": 0,
         "won": false
       }
+    ],
+    "Japan": [
+      {
+        "round": "R32",
+        "opponent": "Brazil",
+        "goals": "1",
+        "cleanSheet": false,
+        "redCards": 0,
+        "won": false
+      }
     ]
   },
-  "exportedAt": "2026-06-28T06:11:56.257Z"
+  "exportedAt": "2026-06-30T09:59:33.990Z"
 }
