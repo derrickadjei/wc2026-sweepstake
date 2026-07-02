@@ -596,10 +596,10 @@
       {
         "round": "R32",
         "opponent": "Sweden",
-        "goals": "",
-        "cleanSheet": false,
+        "goals": "3",
+        "cleanSheet": true,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Switzerland": [
@@ -616,7 +616,7 @@
       {
         "round": "R32",
         "opponent": "Belgium",
-        "goals": "",
+        "goals": "2",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -628,7 +628,7 @@
         "opponent": "Mexico",
         "goals": "",
         "cleanSheet": false,
-        "redCards": 0,
+        "redCards": "1",
         "won": false
       }
     ],
@@ -656,10 +656,10 @@
       {
         "round": "R32",
         "opponent": "DR Congo",
-        "goals": "",
+        "goals": "2",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Netherlands": [
@@ -676,10 +676,10 @@
       {
         "round": "R32",
         "opponent": "Ecuador",
-        "goals": "",
-        "cleanSheet": false,
+        "goals": "2",
+        "cleanSheet": true,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Colombia": [
@@ -716,17 +716,17 @@
       {
         "round": "R32",
         "opponent": "Ivory Coast",
-        "goals": "",
+        "goals": "2",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Ivory Coast": [
       {
         "round": "R32",
         "opponent": "Norway",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -736,7 +736,7 @@
       {
         "round": "R32",
         "opponent": "England",
-        "goals": "",
+        "goals": "1",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -756,10 +756,10 @@
       {
         "round": "R32",
         "opponent": "Senegal",
-        "goals": "",
+        "goals": "3",
         "cleanSheet": false,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Brazil": [
@@ -776,7 +776,7 @@
       {
         "round": "R32",
         "opponent": "Bosnia and H",
-        "goals": "",
+        "goals": "0",
         "cleanSheet": false,
         "redCards": 0,
         "won": false
@@ -786,10 +786,10 @@
       {
         "round": "R32",
         "opponent": "USA",
-        "goals": "",
-        "cleanSheet": false,
+        "goals": "2",
+        "cleanSheet": true,
         "redCards": 0,
-        "won": false
+        "won": true
       }
     ],
     "Algeria": [
@@ -893,5 +893,5 @@
       }
     ]
   },
-  "exportedAt": "2026-06-30T09:59:33.990Z"
+  "exportedAt": "2026-07-02T15:46:28.247Z"
 }
